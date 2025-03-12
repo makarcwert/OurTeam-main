@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We</title>
+    <link rel="stylesheet" href="xui.css">
     <link rel="stylesheet" href="membersstyle.css">
     <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
 </head>
 <body class="backgroundmain">
     <!-- header -->
-    <header class="forheader">
-        <a href="index.html"> <!-- Ссылка на главную страницу -->
-            <img src="kst.jpg" alt="" class="Logo">
-        </a>
-        <div class="auth-button-container">
-            <button class="auth-button" id="auth-button" onclick="handleLogin()">Войти</button>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="https://kst.mskobr.ru/?ysclid=m85ou8c4bm586880086">
+                    <img src="kst.jpg" alt="" class="Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <div class="auth-button-container">
+                        <li><a href="account.html" id="auth-button" onclick="handleLogin()">Войти</a></li>
+                    </div>
+                    <li><a href="#">Авторизация</a></li>
+                    
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- content -->
@@ -59,7 +70,7 @@
             </div>
         </div>
         <br><br><br>
-    <h1 class="centerh1 fade-in">Тестировщики</h1>
+    <h1 class="centerh1 fade-in">Таксисты</h1>
         <br><br>
         <div class="imgbox fade-in">
             <div class="item">

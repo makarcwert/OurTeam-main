@@ -39,6 +39,7 @@
     z-index: 1000;
 }
 
+
 .imgbox{
     margin-left: 20px;
     display: flex;
@@ -56,7 +57,7 @@
 
 .forfooter{
     width: 100%;
-    background-color: rgb(0, 66, 1);
+    background-color: rgb(61, 79, 112);
     bottom: 0;
     margin: auto;
     height: 50px;
@@ -66,13 +67,7 @@
     height: auto;
     border-radius: 90%; 
 }
-.auth-button-container {
-   
-    position: absolute; /* Абсолютное позиционирование */
-    top: 10px; /* Отступ от верхнего края */
-    right: 20px; /* Отступ от правого края */
-   
-}
+
 .right-header {
     position: relative;
     top: 10px; /* Отступ от верхнего края */
@@ -101,6 +96,7 @@
 .visible {
     opacity: 1;
 }
+
 /*дизайнеры */
 .vas > img:hover{
     content: url('assets/hover/Vasilisa.jpg');
