@@ -32,14 +32,32 @@
     <!-- content -->
     <div class="wrapper">
         <h1 class="centerh1">Информация</h1>
-        <h1> Скрыпкин Макар Юрьевич</h1>
-        <h1> Род деятельности:</h1>
+        <form id="userInfoForm">
+            <label for="fullName">Полное имя:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            
+            <label for="education">Образование:</label>
+            <input type="text" id="education" name="education" required>
+            
+            <label for="skills">Навыки:</label>
+            <input type="text" id="skills" name="skills" required>
+            
+            <label for="contact">Контактная информация:</label>
+            <input type="text" id="contact" name="contact" required>
+            
+            <label for="aboutMe">О себе:</label>
+            <textarea id="aboutMe" name="aboutMe" required></textarea>
+            
+            <button type="submit">Сохранить информацию</button>
+        </form>
+    </div>
         
 
     </div>
 
     <!-- footer -->
     <footer class="forfooter">
+        <p>&copy; 2023 Все права защищены.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
