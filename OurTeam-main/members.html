@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We</title>
+    <link rel="stylesheet" href="membersstyle.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+<body class="backgroundmain">
+    <!-- header -->
+    <header class="forheader">
+        <a href="index.html"> <!-- Ссылка на главную страницу -->
+            <img src="kst.jpg" alt="" class="Logo">
+        </a>
+        <div class="auth-button-container">
+            <button class="auth-button" id="auth-button" onclick="handleLogin()">Войти</button>
+        </div>
+    </header>
+    <!-- content -->
+    <div class="wrapper">
+        <br><br><br>
+    <h1 class="centerh1">Дизайнеры</h1>
+        <br><br>
+        <div class="imgbox">
+            <div class="liza">
+                <img src="assets/Liza.jpg" alt="" class="forimg3 liza">
+                <h2>Караогланян Лиза</h2>
+            </div>
+            <div class="aks">
+                <img src="assets/aksiny.jfif" alt="" class="forimg3 aks">
+                <h2>Хохлова Аксинья</h2>
+            </div>
+            <div class="vas">
+                <img src="assets/vasilisa.jfif" alt="" class="forimg3 vas">
+                <h2>Дрокина Василиса</h2>
+            </div>
+        </div>
+        <br><br><br>
+    <h1 class="centerh1 fade-in">Глав мозг</h1>
+        <br><br>
+        <div class="imgbox fade-in">
+            <div class="item">
+                <img src="assets/dinar.jpg" alt="" class="forimg3">
+                <h2>Ситдиков Динар</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Makar.jpg" alt="" class="forimg3">
+                <h2>Скрыпкин Макар</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Sergey Pavlu.jpg" alt="" class="forimg3">
+                <h2>Павлюченко Сергей</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Zlata.jpg" alt="" class="forimg3">
+                <h2>Панченко Злата</h2>
+            </div>
+        </div>
+        <br><br><br>
+    <h1 class="centerh1 fade-in">Тестировщики</h1>
+        <br><br>
+        <div class="imgbox fade-in">
+            <div class="item">
+                <img src="assets/vova.jpg" alt="" class="forimg3">
+                <h2>Сулацкий Владимир</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Denis.jpg" alt="" class="forimg3">
+                <h2>Исаев Денис</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Alik.jpg" alt="" class="forimg3">
+                <h2>Мамедов Аликпер</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Rezanov.jpg" alt="" class="forimg3">
+                <h2>Резанов Кирилл</h2>
+            </div>
+            <div class="item">
+                <img src="assets/" alt="" class="forimg3">
+                <h2>Пильчук Семён</h2>
+            </div>
+        </div>
+        <br><br><br>
+    <h1 class="centerh1 fade-in">Поддержка</h1>
+        <br><br>
+        <div class="imgbox fade-in">
+            <div class="item">
+                <img src="assets/sanya elisey.jpg" alt="" class="forimg3">
+                <h2>Александр Елисеев</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Elveg.jpg" alt="" class="forimg3">
+                <h2>Убушаев Эльвег</h2>
+            </div>
+            <div class="item">
+                <img src="assets/Sanya Degtyar.jpg" alt="" class="forimg3">
+                <h2>Дегтярев Александр</h2>
+            </div>
+        </div>
+        <br><br><br>
+        <button class="btn btn-outline-dark fade-in" onclick="window.location.href='#top'" 
+        style="position: absolute;bottom: 0;margin-left: 600px; width: 150px;">Наверх</button>
+    </div>
+    <!-- footer -->
+    <footer class="forfooter">
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="fadein.js"></script>
+    <script>
+        function handleLogin() {
+            // Здесь можно добавить логику для проверки учетных данных
+            // Если вход успешен, переходим на страницу аккаунта
+            document.getElementById("auth-button").innerText = "Аккаунт"; // Изменяем текст кнопки
+            window.location.href = "account.html"; // Переход на страницу аккаунта
+        }
+    </script>
+</body>
+</html>

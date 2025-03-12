@@ -1,0 +1,138 @@
+.backgroundmain{
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(back1.jpg);
+    height: 90%;
+}
+.centerh1{
+    text-align: center;
+}
+
+
+.forimg3 {
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 10px; 
+    width: 350px;
+    height: 350px;
+    margin-bottom: 60px;
+    transition: all 0.3s ease;
+}
+.wrapper {
+    width: 85%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(240, 255, 240);
+    margin: auto;
+    position: relative;
+    margin-top: 110px;
+}
+.forheader{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(108, 119, 143);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.imgbox{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item > h2{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+
+.item{
+    text-align: center;
+    margin: 10px;
+}
+
+.forfooter{
+    width: 100%;
+    background-color: rgb(0, 66, 1);
+    bottom: 0;
+    margin: auto;
+    height: 50px;
+}
+.Logo{
+    width: 150px;
+    height: auto;
+    border-radius: 90%; 
+}
+.auth-button-container {
+   
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Отступ от верхнего края */
+    right: 20px; /* Отступ от правого края */
+   
+}
+.right-header {
+    position: relative;
+    top: 10px; /* Отступ от верхнего края */
+    right: 0px; /* Отступ от правого края */
+    z-index: 1000; /* Поверх других элементов */
+}
+.auth-button {
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 16px; /* Размер шрифта */
+    color: white; /* Цвет текста */
+    background-color: #004eb4; /* Цвет кнопки */
+    border: none; /* Убираем обводку */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.auth-button:hover {
+    background-color: #3c6c9e; /* Цвет кнопки при наведении */
+} 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+/*дизайнеры */
+.vas > img:hover{
+    content: url('assets/hover/Vasilisa.jpg');
+    text-align: center;
+    margin: 10px;
+    
+
+}
+
+.vas > h2{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+.aks > img:hover{
+    content: url('assets/hover/aks.jpg');
+    text-align: center;
+    margin: 10px;
+    
+
+}
+.aks > h2{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+.liza > img:hover{
+    content: url('assets/hover/liza.jpg');
+    text-align: center;
+    margin: 10px;
+    
+
+}
+.liza > h2{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
