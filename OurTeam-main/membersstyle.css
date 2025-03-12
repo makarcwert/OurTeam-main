@@ -132,3 +132,32 @@
     margin-top: 5px;
     margin-bottom: 100px;
 }
+/*таксисты*/
+.simen img:hover{
+    content: url('assets/hover/simen.jpg');
+    text-align: center;
+    margin: 10px;
+}
+.simen > h2{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+.niga img:hover{
+    content: url('assets/hover/niga.jpg');
+    text-align: center;
+    margin: 10px;
+}
+.niga > h2{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+/*ЮМИ МЕЙНЕРЫ*/
+.lega img:hover{
+    content: url('assets/hover/lega.jpg');
+    text-align: center;
+    margin: 10px;
+}
+.lega > h2{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
