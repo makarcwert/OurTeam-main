@@ -21,13 +21,22 @@
             <div class="container">
                 <div class="logo">
                     <h1>Главная</h1>
-                    <button class="btn btn-secondary" onclick="window.location.href='login.html'">Вход</button>
-                    <button class="btn btn-secondary" onclick="window.location.href='register.html'">Регистрация</button>
                 </div>
+                <div class="menu-button" onclick="showSidebar()">
+                    Меню
+                </div>
+                <aside class="sidebar" id="sidebar" style="display: none; background-color: white; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                    <button class="auth-button" onclick="window.location.href='login.html'">Вход</button>
+                    <button class="auth-button" onclick="window.location.href='register.html'">Регистрация</button>
+                    <button class="auth-button" onclick="window.location.href='index.html'">Главная</button>
+                    <button class="auth-button" onclick="window.location.href='members.html'">Участники</button>
+                </aside>
+            
             </div>
-           
         </div>
     </header>
+   
+    
     <!-- content -->
     <div class="wrapper">
         <br><br><br>
@@ -118,6 +127,12 @@
     <footer class="forfooter">
     </footer>
 
+    <script>
+        function showSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.style.display = (sidebar.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -131,4 +146,3 @@
         }
     </script>
 </body>
-</html>
