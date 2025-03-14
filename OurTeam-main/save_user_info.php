@@ -1,19 +1,27 @@
 <?php
-header('Content-Type: application/json');
+require_once 'config.php';
 
-$input = json_decode(file_get_contents('php://input'), true);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $password = password_hash(trim($_POST['password']), PASSWORD_BCRYPT);
+    $full_name = trim($_POST['fullName']);
+    $education = trim($_POST['education']);
+    $skills = trim($_POST['skills']);
+    $contact = trim($_POST['contact']);
+    $about_me = trim($_POST['aboutMe']);
 
-// Здесь вы можете сохранить данные в базу данных
-// Например, используя PDO для работы с MySQL
+    $sql = "INSERT INTO users (username, email, password, full_name, education, skills, contact, about_me) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $db->prepare($sql);
+    $stmt->bind_param("ssssssss", $username, $email, $password, $full_name, $education, $skills, $contact, $about_me);
 
-// Пример сохранения в базу данных
-try {
-    $pdo = new PDO('mysql:host=localhost;dbname=your_database', 'username', 'password');
-    $stmt = $pdo->prepare("INSERT INTO user_info (full_name, education, skills, contact, about_me) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$input['fullName'], $input['education'], $input['skills'], $input['contact'], $input['aboutMe']]);
-    
-    echo json_encode(['status' => 'success']);
-} catch (PDOException $e) {
-    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+    if ($stmt->execute()) {
+        echo "Данные успешно сохранены!";
+    } else {
+        echo "Ошибка: " . $stmt->error;
+    }
+
+    $stmt->close();
+    mysqli_close($db);
 }
 ?>

@@ -61,13 +61,28 @@
     bottom: 0;
     margin: auto;
     height: 50px;
+    position: fixed;
 }
 .Logo{
     width: 150px;
     height: auto;
     border-radius: 90%; 
 }
+.form-group {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    margin-bottom: 10px; /* Отступ между группами */
+}
 
+.form-group label {
+    margin-right: 10px; /* Отступ между label и input */
+    width: 150px; /* Ширина для label, чтобы они были одинаковыми */
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1; /* Занять оставшееся пространство */
+}
 .right-header {
     position: relative;
     top: 10px; /* Отступ от верхнего края */
@@ -161,3 +176,4 @@
     margin-top: 5px;
     margin-bottom: 100px;
 }
+
