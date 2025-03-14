@@ -14,31 +14,12 @@
     <header>
         <div class="container">
             <div class="logo">
-    <h1 class="centerh1">Ваш аккаунт</h1>
-
-
-
+                <h1>Ваш аккаунт</h1>
+                <button class="btn btn-secondary" onclick="window.location.href='login.html'">Вход</button>
+                <button class="btn btn-secondary" onclick="window.location.href='members.html'">Участники</button>
             </div>
-    <div class="menu-button" onclick="showSidebar()">
-        <span>Меню</span>
-    </div>
-
-    <aside class="sidebar" id="sidebar" style="display: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-
-                <button class="auth-button" onclick="window.location.href='login.html'">Вход</button>
-
-                <button class="auth-button" onclick="window.location.href='register.html'">Регистрация</button>
-
-                <button class="auth-button" onclick="window.location.href='index.html'">Главная</button>
-
-                <button class="auth-button" onclick="window.location.href='members.html'">Участники</button>
-
-            </aside>
         </div>
     </header>
-   
-    
-
 
     <!-- content -->
     <div class="wrapper">
@@ -75,21 +56,7 @@
         <p>&copy; 2023 Все права защищены.</p>
     </footer>
 
-    <script>
-        function showSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            sidebar.style.display = (sidebar.style.display === 'block') ? 'none' : 'block';
-        }
-
-        
-        document.getElementById('logoutButton').addEventListener('click', function() {
-            localStorage.removeItem('loggedIn'); // Clear login state
-            window.location.href = 'login.html'; // Redirect to login page
-        });
-    </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>document.getElementById('userInfoForm').addEventListener('submit', function(event) {
@@ -120,5 +87,12 @@
         .then(data => {
             console.log('Успешно сохранено:', data);
             // Вы можете добавить уведомление на странице о том, что данные успешно сохранены
+            document.getElementById('message').innerText = 'Данные успешно сохранены!';
+        })
+        .catch((error) => {
+            console.error('Ошибка:', error);
+            // Вы можете добавить уведомление на странице о том, что произошла ошибка
+            document.getElementById('message').innerText = 'Ошибка при сохранении данных.';
         });
     });</script>
+        
