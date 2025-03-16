@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аккаунт</title>
+    <link rel="stylesheet" href="membersstyle.css">
+    <link rel="stylesheet" href="xui.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+<body class="backgroundmain">
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+    <h1 class="centerh1">Ваш аккаунт</h1>
+
+
+
+            </div>
+    <div class="menu-button" onclick="showSidebar()">
+        <span>Меню</span>
+    </div>
+
+    <aside class="sidebar" id="sidebar" style="display: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+
+                <button class="auth-button" onclick="window.location.href='login.html'">Вход</button>
+
+                <button class="auth-button" onclick="window.location.href='register.html'">Регистрация</button>
+
+                <button class="auth-button" onclick="window.location.href='index.html'">Главная</button>
+
+                <button class="auth-button" onclick="window.location.href='members.html'">Участники</button>
+
+            </aside>
+        </div>
+    </header>
+   
+    
+
+
+    <!-- content -->
+    <div class="wrapper">
+        <h1 class="centerh1">Информация</h1>
+        <form id="userInfoForm">
+            <div class="form-group">
+                <label for="fullName">Полное имя:</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Образование:</label>
+                <input type="text" id="education" name="education" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="skills">Навыки:</label>
+                <input type="text" id="skills" name="skills" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Контактная информация:</label>
+                <input type="text" id="contact" name="contact" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="aboutMe">О себе:</label>
+                <textarea id="aboutMe" name="aboutMe" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить информацию</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='members.html'">Назад</button>
+        </form>
+        <div id="message" class="mt-3"></div>
+    </div>
+
+    <!-- footer -->
+    <footer class="forfooter">
+        <p>&copy; 2023 Все права защищены.</p>
+    </footer>
+
+    <script>
+        function showSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.style.display = (sidebar.style.display === 'block') ? 'none' : 'block';
+        }
+
+        
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('loggedIn'); // Clear login state
+            window.location.href = 'login.html'; // Redirect to login page
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>document.getElementById('userInfoForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвратить отправку формы
+    
+        // Получение данных из формы
+        const fullName = document.getElementById('fullName').value;
+        const education = document.getElementById('education').value;
+        const skills = document.getElementById('skills').value;
+        const contact = document.getElementById('contact').value;
+        const aboutMe = document.getElementById('aboutMe').value;
+    
+        // Отправка данных на сервер с помощью fetch
+        fetch('save_user_info.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'fullName': fullName,
+                'education': education,
+                'skills': skills,
+                'contact': contact,
+                'aboutMe': aboutMe
+            })
+        })
+        .then(response => response.text()) // Получаем ответ от сервера
+        .then(data => {
+            console.log('Успешно сохранено:', data);
+            // Вы можете добавить уведомление на странице о том, что данные успешно сохранены
+        });
+    });</script>
