@@ -69,7 +69,8 @@
     bottom: 0;
     margin: auto;
     height: 50px;
-    position: cover;
+    position: fixed;
+
 }
 .Logo {
     width: 150px;
