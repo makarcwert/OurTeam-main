@@ -1,0 +1,12 @@
+.backgroundmain {
+    background-position: center;
+    background-attachment: cover;
+    background-size: cover;
+    background-image: url(indexBG.jpg);
+    height: 90%;
+}
+
+.qwer {
+    text-align: center;
+    margin-top: 256px;
+}
